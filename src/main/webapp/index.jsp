@@ -27,11 +27,6 @@
         //xmlhttp.open("post","/hello.do",true);
         //字符编码
 
-        var a = 0;
-
-
-
-
 
         xmlhttp.onreadystatechange = function(){
           if(xmlhttp.readyState == 4){
