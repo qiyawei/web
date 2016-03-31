@@ -12,6 +12,7 @@
 
   <script>
 
+
       var a =document.querySelector("h1").childNodes[0].nodeValue;
       //var a = document.querySelector("h1").innerText;
       console.log(a);
