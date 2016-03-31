@@ -8,14 +8,16 @@
 <body>
 
 
-  <h1>hello.jshhhhp，word</h1>
+  <h1>hello.jshhhhp，word<a>mmm</a></h1>
 
   <script>
 
 
-      var a =document.querySelector("h1").childNodes[0].nodeValue;
+      var h=document.querySelector("h1")
       //var a = document.querySelector("h1").innerText;
-      console.log(a);
+     var a = h.firstChild;
+      console.log(a)
+
   </script>
 </body>
 </html>
