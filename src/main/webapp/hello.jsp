@@ -7,16 +7,17 @@
 
 <body>
 
+    <div><a href="">dddd</a>
 
-  <h1>hello.jshhhhp，word<a>mmm</a></h1>
+    </div>
+
 
   <script>
 
 
-      var h=document.querySelector("h1")
+      var div = document.querySelector("div")
       //var a = document.querySelector("h1").innerText;
-     var a = h.firstChild;
-      console.log(a)
+     alert(div.firstChild)
 
   </script>
 </body>
