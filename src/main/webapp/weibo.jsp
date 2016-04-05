@@ -59,7 +59,7 @@
 
 
   loadServer(function(json){
-    
+
     if(json.data.length){
       var source = $("#msgTemplate").html();
       var template = Handlebars.compile(source)
