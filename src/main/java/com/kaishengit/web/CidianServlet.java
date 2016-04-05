@@ -19,9 +19,9 @@ public class CidianServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String word =request.getParameter("word");
         word = new String(word.getBytes("ISO8859-1"),"UTF-8");
-        String msg = HttpClientUtil.getStringByUrl("" + word);
+        String msg = HttpClientUtil.getStringByUrl("http://fanyi.youdao.com/openapi.do?keyfrom=kaishengit&key=1587754017&type=data&doctype=json&version=1.1&q="+word);
         response.setCharacterEncoding("UTF-8");
-        response.setContentType("text/xml;charset=UTF-8");
+        response.setContentType("application/json;charset=UTF-8");
         PrintWriter out = response.getWriter();
         out.print(msg);
         out.flush();
