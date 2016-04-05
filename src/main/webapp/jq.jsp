@@ -18,7 +18,7 @@
   </form>
 <div id="content"></div>
 
-    
+
 </div>
 
 <script src="static/js/jquery-1.12.2.min.js"></script>
@@ -63,7 +63,7 @@
       })*/
     });
     $("#wordbtn").click(function(){
-
+        //alert(111)
        var word = $("#word").val();
        var result = $("#result");
        result.html("");
