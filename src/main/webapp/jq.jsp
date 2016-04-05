@@ -18,6 +18,7 @@
   </form>
 <div id="content"></div>
 
+    
 </div>
 
 <script src="static/js/jquery-1.12.2.min.js"></script>
