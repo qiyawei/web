@@ -32,6 +32,7 @@ public class EditServlet extends HttpServlet {
         Auth auth = Auth.create(AK,SK);
         String token = auth.uploadToken(bucketName,null,3600,stringMap);
 
+        
         req.setAttribute("token",token);
         req.getRequestDispatcher("edit.jsp").forward(req,resp);
     }
