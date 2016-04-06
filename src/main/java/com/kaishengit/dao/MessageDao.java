@@ -9,12 +9,12 @@ import java.util.List;
 public class MessageDao {
 
     public List<Message> findAll() {
-        String sql = "select * from t_message order by id desc";
+        String sql = "select * from message order by id desc";
         return DBHelp.query(sql,new BeanListHandler<>(Message.class));
     }
 
     public List<Message> findByMaxId(String maxId) {
-        String sql = "select * from t_message where id > ? order by id desc";
+        String sql = "select * from message where id > ? order by id desc";
         return DBHelp.query(sql,new BeanListHandler<>(Message.class),maxId);
     }
 }

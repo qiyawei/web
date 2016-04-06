@@ -13,9 +13,9 @@
   </div>
   <script  type="text/x-template" id="msgTemplate">
     {{#each data}}
-      <h4>{{mwssage}}</h4>
+    <h3>{{message}}</h3>
     {{else}}
-      <h4>当前没有更新</h4>
+    <h3>暂时没有数据</h3>
     {{/each}}
   </script>
 </div>
@@ -32,7 +32,7 @@
       }
 
     })
-  });
+  },5000);
   $("#msgHelp").click(function(){
     if(jsondata){
       maxId = jsondata.data[0].id;
@@ -50,11 +50,11 @@
 
 
   function loadServer(fn){
-    $.get("/weibo.do",{"maxId":maxid}).done(function(json){
+    $.get("/weibo.do",{"maxId":maxId}).done(function(json){
        fn(json);
-    }).fail(function(){
+    })/*.fail(function(){
       alert("服务器出错了")
-    })
+    })*/
   }
 
 
@@ -62,8 +62,10 @@
 
     if(json.data.length){
       var source = $("#msgTemplate").html();
+      console.log(html)
       var template = Handlebars.compile(source)
       var html = template(json)
+
       $(".messages").append(html);
       maxId = json.data[0].id;
     }

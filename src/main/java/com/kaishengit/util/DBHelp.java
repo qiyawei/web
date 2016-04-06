@@ -2,7 +2,7 @@ package com.kaishengit.util;
 
 import java.sql.SQLException;
 
-import com.kaishengit.exception.DataAccessException;
+
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
 
@@ -17,7 +17,7 @@ public class DBHelp {
 			queryRunner.update(sql,params);
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new DataAccessException(e,"SQL:" + sql);
+
 		}
 
 	}
@@ -31,7 +31,7 @@ public class DBHelp {
 			return queryRunner.query(sql,handler,params);
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new DataAccessException(e,"SQL:" + sql);
+			return null;
 		}
 	}
 }
